@@ -1,11 +1,8 @@
-// Import stylesheets
-import './style.css';
 
-// Write Javascript code!
-const botao = document.getElementById('btnClique');
+const gerarNumeroBtn = document.getElementById('Rolardado');
+const numeroGeradoH1 = document.getElementById('resultado');
+gerarNumeroBtn.addEventListener('click', () => {
+  const DadosRolados = Math.floor(Math.random() * 6) + 1;
+  numeroGeradoH1.innerText = `Numero Gerado: ${DadosRolados}`;
+});
 
-botao.addEventListener('click', FnRolardados);
-
-function FnRolardados() {
-   return Math.random() * 6;
-}
